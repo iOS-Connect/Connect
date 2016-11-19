@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1748C4851DE105D8005A0A74 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1748C4841DE105D8005A0A74 /* IntentHandler.swift */; };
+		1748C48D1DE105D8005A0A74 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1748C48C1DE105D8005A0A74 /* IntentsUI.framework */; };
+		1748C4901DE105D8005A0A74 /* IntentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1748C48F1DE105D8005A0A74 /* IntentViewController.swift */; };
+		1748C4931DE105D8005A0A74 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1748C4911DE105D8005A0A74 /* MainInterface.storyboard */; };
+		1748C4971DE105D8005A0A74 /* MessageIntentionUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1748C48B1DE105D8005A0A74 /* MessageIntentionUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1748C49A1DE105D8005A0A74 /* MessageIntention.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1748C4821DE105D8005A0A74 /* MessageIntention.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		52BB49661DE0E42C00BD0CC7 /* SendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BB49651DE0E42C00BD0CC7 /* SendViewController.swift */; };
 		52EC39EF1DE01A1D007BFFE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EC39EE1DE01A1D007BFFE4 /* AppDelegate.swift */; };
 		52EC39F41DE01A1D007BFFE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52EC39F21DE01A1D007BFFE4 /* Main.storyboard */; };
@@ -17,8 +23,49 @@
 		9D83E1AB9385D3501648BB3C /* Pods_Connnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7D5401973B1A1FEA171B1A /* Pods_Connnect.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1748C4951DE105D8005A0A74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52EC39E31DE01A1D007BFFE4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1748C48A1DE105D8005A0A74;
+			remoteInfo = MessageIntentionUI;
+		};
+		1748C4981DE105D8005A0A74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52EC39E31DE01A1D007BFFE4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1748C4811DE105D8005A0A74;
+			remoteInfo = MessageIntention;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1748C4A11DE105D8005A0A74 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1748C4971DE105D8005A0A74 /* MessageIntentionUI.appex in Embed App Extensions */,
+				1748C49A1DE105D8005A0A74 /* MessageIntention.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		13C18047EDECA9777331726F /* Pods-Connnect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Connnect.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Connnect/Pods-Connnect.debug.xcconfig"; sourceTree = "<group>"; };
+		1748C4821DE105D8005A0A74 /* MessageIntention.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MessageIntention.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		1748C4841DE105D8005A0A74 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		1748C4861DE105D8005A0A74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1748C48B1DE105D8005A0A74 /* MessageIntentionUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MessageIntentionUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		1748C48C1DE105D8005A0A74 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		1748C48F1DE105D8005A0A74 /* IntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentViewController.swift; sourceTree = "<group>"; };
+		1748C4921DE105D8005A0A74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		1748C4941DE105D8005A0A74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1748C4A21DE105F1005A0A74 /* Connnect.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Connnect.entitlements; sourceTree = "<group>"; };
 		52BB49651DE0E42C00BD0CC7 /* SendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendViewController.swift; sourceTree = "<group>"; };
 		52EC39EB1DE01A1D007BFFE4 /* Connnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Connnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52EC39EE1DE01A1D007BFFE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +80,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1748C47F1DE105D8005A0A74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1748C4881DE105D8005A0A74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1748C48D1DE105D8005A0A74 /* IntentsUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		52EC39E81DE01A1D007BFFE4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -44,6 +106,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1748C4831DE105D8005A0A74 /* MessageIntention */ = {
+			isa = PBXGroup;
+			children = (
+				1748C4841DE105D8005A0A74 /* IntentHandler.swift */,
+				1748C4861DE105D8005A0A74 /* Info.plist */,
+			);
+			path = MessageIntention;
+			sourceTree = "<group>";
+		};
+		1748C48E1DE105D8005A0A74 /* MessageIntentionUI */ = {
+			isa = PBXGroup;
+			children = (
+				1748C48F1DE105D8005A0A74 /* IntentViewController.swift */,
+				1748C4911DE105D8005A0A74 /* MainInterface.storyboard */,
+				1748C4941DE105D8005A0A74 /* Info.plist */,
+			);
+			path = MessageIntentionUI;
+			sourceTree = "<group>";
+		};
 		307B39513CCB71DA2C75B6A4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -57,6 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				52EC39ED1DE01A1D007BFFE4 /* Connnect */,
+				1748C4831DE105D8005A0A74 /* MessageIntention */,
+				1748C48E1DE105D8005A0A74 /* MessageIntentionUI */,
 				52EC39EC1DE01A1D007BFFE4 /* Products */,
 				307B39513CCB71DA2C75B6A4 /* Pods */,
 				85CF3BB3AF612B6614595EED /* Frameworks */,
@@ -67,6 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				52EC39EB1DE01A1D007BFFE4 /* Connnect.app */,
+				1748C4821DE105D8005A0A74 /* MessageIntention.appex */,
+				1748C48B1DE105D8005A0A74 /* MessageIntentionUI.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -74,6 +159,7 @@
 		52EC39ED1DE01A1D007BFFE4 /* Connnect */ = {
 			isa = PBXGroup;
 			children = (
+				1748C4A21DE105F1005A0A74 /* Connnect.entitlements */,
 				52EC39EE1DE01A1D007BFFE4 /* AppDelegate.swift */,
 				52EC39F21DE01A1D007BFFE4 /* Main.storyboard */,
 				79CE7D8A1DE0D8C4006F9565 /* Send */,
@@ -106,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				6E7D5401973B1A1FEA171B1A /* Pods_Connnect.framework */,
+				1748C48C1DE105D8005A0A74 /* IntentsUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -113,6 +200,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1748C4811DE105D8005A0A74 /* MessageIntention */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1748C4A01DE105D8005A0A74 /* Build configuration list for PBXNativeTarget "MessageIntention" */;
+			buildPhases = (
+				1748C47E1DE105D8005A0A74 /* Sources */,
+				1748C47F1DE105D8005A0A74 /* Frameworks */,
+				1748C4801DE105D8005A0A74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MessageIntention;
+			productName = MessageIntention;
+			productReference = 1748C4821DE105D8005A0A74 /* MessageIntention.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		1748C48A1DE105D8005A0A74 /* MessageIntentionUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1748C49F1DE105D8005A0A74 /* Build configuration list for PBXNativeTarget "MessageIntentionUI" */;
+			buildPhases = (
+				1748C4871DE105D8005A0A74 /* Sources */,
+				1748C4881DE105D8005A0A74 /* Frameworks */,
+				1748C4891DE105D8005A0A74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MessageIntentionUI;
+			productName = MessageIntentionUI;
+			productReference = 1748C48B1DE105D8005A0A74 /* MessageIntentionUI.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		52EC39EA1DE01A1D007BFFE4 /* Connnect */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52EC39FD1DE01A1D007BFFE4 /* Build configuration list for PBXNativeTarget "Connnect" */;
@@ -123,10 +244,13 @@
 				52EC39E91DE01A1D007BFFE4 /* Resources */,
 				B422EE42A86AA0C3AFCFFF7C /* [CP] Embed Pods Frameworks */,
 				5EE6BBDB934E4501E0DA7B08 /* [CP] Copy Pods Resources */,
+				1748C4A11DE105D8005A0A74 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1748C4961DE105D8005A0A74 /* PBXTargetDependency */,
+				1748C4991DE105D8005A0A74 /* PBXTargetDependency */,
 			);
 			name = Connnect;
 			productName = Connnect;
@@ -143,10 +267,25 @@
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "iOS-Connect";
 				TargetAttributes = {
+					1748C4811DE105D8005A0A74 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = VY4FR2X9W5;
+						ProvisioningStyle = Automatic;
+					};
+					1748C48A1DE105D8005A0A74 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = VY4FR2X9W5;
+						ProvisioningStyle = Automatic;
+					};
 					52EC39EA1DE01A1D007BFFE4 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = VY4FR2X9W5;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Siri = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -164,11 +303,28 @@
 			projectRoot = "";
 			targets = (
 				52EC39EA1DE01A1D007BFFE4 /* Connnect */,
+				1748C4811DE105D8005A0A74 /* MessageIntention */,
+				1748C48A1DE105D8005A0A74 /* MessageIntentionUI */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1748C4801DE105D8005A0A74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1748C4891DE105D8005A0A74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1748C4931DE105D8005A0A74 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		52EC39E91DE01A1D007BFFE4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -232,6 +388,22 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1748C47E1DE105D8005A0A74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1748C4851DE105D8005A0A74 /* IntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1748C4871DE105D8005A0A74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1748C4901DE105D8005A0A74 /* IntentViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		52EC39E71DE01A1D007BFFE4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -243,7 +415,28 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		1748C4961DE105D8005A0A74 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1748C48A1DE105D8005A0A74 /* MessageIntentionUI */;
+			targetProxy = 1748C4951DE105D8005A0A74 /* PBXContainerItemProxy */;
+		};
+		1748C4991DE105D8005A0A74 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1748C4811DE105D8005A0A74 /* MessageIntention */;
+			targetProxy = 1748C4981DE105D8005A0A74 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		1748C4911DE105D8005A0A74 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1748C4921DE105D8005A0A74 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		52EC39F21DE01A1D007BFFE4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -271,6 +464,58 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1748C49B1DE105D8005A0A74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = VY4FR2X9W5;
+				INFOPLIST_FILE = MessageIntention/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ios-connect.Connnect.MessageIntention";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		1748C49C1DE105D8005A0A74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = VY4FR2X9W5;
+				INFOPLIST_FILE = MessageIntention/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ios-connect.Connnect.MessageIntention";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		1748C49D1DE105D8005A0A74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = VY4FR2X9W5;
+				INFOPLIST_FILE = MessageIntentionUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ios-connect.Connnect.MessageIntentionUI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		1748C49E1DE105D8005A0A74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = VY4FR2X9W5;
+				INFOPLIST_FILE = MessageIntentionUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ios-connect.Connnect.MessageIntentionUI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		52EC39FB1DE01A1D007BFFE4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -368,7 +613,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 13C18047EDECA9777331726F /* Pods-Connnect.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Connnect/Connnect.entitlements;
 				DEVELOPMENT_TEAM = VY4FR2X9W5;
 				INFOPLIST_FILE = Connnect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -382,7 +629,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B264C5835CF8806D2E38FF09 /* Pods-Connnect.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Connnect/Connnect.entitlements;
 				DEVELOPMENT_TEAM = VY4FR2X9W5;
 				INFOPLIST_FILE = Connnect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -395,6 +644,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1748C49F1DE105D8005A0A74 /* Build configuration list for PBXNativeTarget "MessageIntentionUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1748C49D1DE105D8005A0A74 /* Debug */,
+				1748C49E1DE105D8005A0A74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1748C4A01DE105D8005A0A74 /* Build configuration list for PBXNativeTarget "MessageIntention" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1748C49B1DE105D8005A0A74 /* Debug */,
+				1748C49C1DE105D8005A0A74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		52EC39E61DE01A1D007BFFE4 /* Build configuration list for PBXProject "Connnect" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
