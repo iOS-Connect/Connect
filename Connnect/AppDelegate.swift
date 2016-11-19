@@ -11,12 +11,14 @@ enum PubNubKeys {
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, PNObjectEventListener {
 
+    static let shared = UIApplication.shared.delegate as! AppDelegate
     
     var window: UIWindow?
     var client: PubNub!
     var myMessages = [String]()
     var notification = NotificationCenter.default
     let notificationName = Notification.Name("NewMessage")
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

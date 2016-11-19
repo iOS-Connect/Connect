@@ -6,13 +6,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Send View Controller-->
         <scene sceneID="03C-og-cx0">
             <objects>
-                <viewController id="lJQ-fY-fuc" sceneMemberID="viewController">
+                <viewController id="lJQ-fY-fuc" customClass="SendViewController" customModule="Connnect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fjj-eU-Tch"/>
                         <viewControllerLayoutGuide type="bottom" id="a3s-q5-7Sc"/>
@@ -21,17 +22,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Send" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqp-lv-r3E">
-                                <rect key="frame" x="46" y="323" width="40" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Send a message" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hdP-vm-EQg">
+                                <rect key="frame" x="16" y="184" width="343" height="30"/>
                                 <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="send"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hdP-vm-EQg" firstAttribute="leading" secondItem="0Jl-7C-PgW" secondAttribute="leadingMargin" id="d8p-E6-gjg"/>
+                            <constraint firstItem="hdP-vm-EQg" firstAttribute="top" secondItem="fjj-eU-Tch" secondAttribute="bottom" constant="120" id="eZO-Lq-4Ga"/>
+                            <constraint firstItem="hdP-vm-EQg" firstAttribute="trailing" secondItem="0Jl-7C-PgW" secondAttribute="trailingMargin" id="ii6-4q-Tuh"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7U3-Ni-AGp"/>
+                    <connections>
+                        <outlet property="messageTextField" destination="hdP-vm-EQg" id="OcM-mQ-nfd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D5K-ta-bcE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
