@@ -1,21 +1,22 @@
-//
-//  AppDelegate.swift
-//  Connnect
-//
-//  Created by John Regner on 11/18/16.
-//  Copyright © 2016 iOS-Connect. All rights reserved.
-//
-
 import UIKit
-
+import PubNub
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, PNObjectEventListener {
 
+    
     var window: UIWindow?
+    var client: PubNub!
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        // Initialize and configure PubNub client instance
+        let configuration = PNConfiguration(publishKey: "demo", subscribeKey: "demo")
+        self.client = PubNub.client(with: configuration)
+        self.client.add(self)
+        
+        // Subscribe to demo channel with presence observation
+        self.client.subscribe(toChannels: ["my_channel"], withPresence: true)
         return true
     }
 
@@ -42,5 +43,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+}
+
+
+extension AppDelegate {
+    func client(_ client: PubNub, didReceiveMessage message: PNMessageResult) {
+        
+        
+        // Handle new message stored in message.data.message
+        if message.data.channel != message.data.subscription {
+            
+            // Message has been received on channel group stored in message.data.subscription.
+        }
+        else {
+            
+            // Message has been received on channel stored in message.data.channel.
+        }
+        
+        print("Received message: \(message.data.message) on channel \(message.data.channel) " +
+            "at \(message.data.timetoken)")
+    }
 }
 
