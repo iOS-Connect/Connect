@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52BB49661DE0E42C00BD0CC7 /* SendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BB49651DE0E42C00BD0CC7 /* SendViewController.swift */; };
 		52EC39EF1DE01A1D007BFFE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EC39EE1DE01A1D007BFFE4 /* AppDelegate.swift */; };
 		52EC39F41DE01A1D007BFFE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52EC39F21DE01A1D007BFFE4 /* Main.storyboard */; };
 		52EC39F61DE01A1D007BFFE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52EC39F51DE01A1D007BFFE4 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		13C18047EDECA9777331726F /* Pods-Connnect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Connnect.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Connnect/Pods-Connnect.debug.xcconfig"; sourceTree = "<group>"; };
+		52BB49651DE0E42C00BD0CC7 /* SendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendViewController.swift; sourceTree = "<group>"; };
 		52EC39EB1DE01A1D007BFFE4 /* Connnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Connnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52EC39EE1DE01A1D007BFFE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52EC39F31DE01A1D007BFFE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				79CE7D881DE0D8B7006F9565 /* Send.storyboard */,
+				52BB49651DE0E42C00BD0CC7 /* SendViewController.swift */,
 			);
 			name = Send;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52BB49661DE0E42C00BD0CC7 /* SendViewController.swift in Sources */,
 				52EC39EF1DE01A1D007BFFE4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
