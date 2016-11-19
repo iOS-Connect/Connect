@@ -11,11 +11,13 @@ enum PubNubKeys {
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, PNObjectEventListener {
 
+    static let shared = UIApplication.shared.delegate as! AppDelegate
     
     var window: UIWindow?
     var client: PubNub!
-
-    static let shared = UIApplication.shared.delegate as! AppDelegate
+    var myMessages = [String]()
+    var notification = NotificationCenter.default
+    let notificationName = Notification.Name("NewMessage")
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -48,9 +50,13 @@ extension AppDelegate {
             
             // Message has been received on channel stored in message.data.channel.
         }
-        
+        guard let theMessage = message.data.message as? String else {return}
+        myMessages.insert(theMessage, at: 0)
+        let note = Notification(name: notificationName)
+        notification.post(note)
         print("Received message: \(message.data.message) on channel \(message.data.actualChannel) " +
             "at \(message.data.timetoken)")
+        
     }
     
     // New presence event handling.

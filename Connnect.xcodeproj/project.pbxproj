@@ -14,6 +14,7 @@
 		52EC39F91DE01A1D007BFFE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52EC39F71DE01A1D007BFFE4 /* LaunchScreen.storyboard */; };
 		79CE7D871DE0D8A6006F9565 /* Messages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79CE7D851DE0D8A6006F9565 /* Messages.storyboard */; };
 		79CE7D891DE0D8B7006F9565 /* Send.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79CE7D881DE0D8B7006F9565 /* Send.storyboard */; };
+		79CE7D8D1DE0E3C1006F9565 /* MessageTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CE7D8C1DE0E3C1006F9565 /* MessageTVC.swift */; };
 		9D83E1AB9385D3501648BB3C /* Pods_Connnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7D5401973B1A1FEA171B1A /* Pods_Connnect.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		6E7D5401973B1A1FEA171B1A /* Pods_Connnect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Connnect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79CE7D861DE0D8A6006F9565 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Messages.storyboard; sourceTree = "<group>"; };
 		79CE7D881DE0D8B7006F9565 /* Send.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Send.storyboard; sourceTree = "<group>"; };
+		79CE7D8C1DE0E3C1006F9565 /* MessageTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTVC.swift; sourceTree = "<group>"; };
 		B264C5835CF8806D2E38FF09 /* Pods-Connnect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Connnect.release.xcconfig"; path = "Pods/Target Support Files/Pods-Connnect/Pods-Connnect.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				79CE7D851DE0D8A6006F9565 /* Messages.storyboard */,
+				79CE7D8C1DE0E3C1006F9565 /* MessageTVC.swift */,
 			);
 			name = Messages;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 			files = (
 				52BB49661DE0E42C00BD0CC7 /* SendViewController.swift in Sources */,
 				52EC39EF1DE01A1D007BFFE4 /* AppDelegate.swift in Sources */,
+				79CE7D8D1DE0E3C1006F9565 /* MessageTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
