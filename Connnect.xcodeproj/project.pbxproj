@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		52EC39EF1DE01A1D007BFFE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EC39EE1DE01A1D007BFFE4 /* AppDelegate.swift */; };
-		52EC39F11DE01A1D007BFFE4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EC39F01DE01A1D007BFFE4 /* ViewController.swift */; };
 		52EC39F41DE01A1D007BFFE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52EC39F21DE01A1D007BFFE4 /* Main.storyboard */; };
 		52EC39F61DE01A1D007BFFE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52EC39F51DE01A1D007BFFE4 /* Assets.xcassets */; };
 		52EC39F91DE01A1D007BFFE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52EC39F71DE01A1D007BFFE4 /* LaunchScreen.storyboard */; };
+		79CE7D871DE0D8A6006F9565 /* Messages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79CE7D851DE0D8A6006F9565 /* Messages.storyboard */; };
+		79CE7D891DE0D8B7006F9565 /* Send.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79CE7D881DE0D8B7006F9565 /* Send.storyboard */; };
 		9D83E1AB9385D3501648BB3C /* Pods_Connnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7D5401973B1A1FEA171B1A /* Pods_Connnect.framework */; };
 /* End PBXBuildFile section */
 
@@ -19,12 +20,13 @@
 		13C18047EDECA9777331726F /* Pods-Connnect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Connnect.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Connnect/Pods-Connnect.debug.xcconfig"; sourceTree = "<group>"; };
 		52EC39EB1DE01A1D007BFFE4 /* Connnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Connnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52EC39EE1DE01A1D007BFFE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		52EC39F01DE01A1D007BFFE4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		52EC39F31DE01A1D007BFFE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52EC39F51DE01A1D007BFFE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52EC39F81DE01A1D007BFFE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52EC39FA1DE01A1D007BFFE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E7D5401973B1A1FEA171B1A /* Pods_Connnect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Connnect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79CE7D861DE0D8A6006F9565 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Messages.storyboard; sourceTree = "<group>"; };
+		79CE7D881DE0D8B7006F9565 /* Send.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Send.storyboard; sourceTree = "<group>"; };
 		B264C5835CF8806D2E38FF09 /* Pods-Connnect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Connnect.release.xcconfig"; path = "Pods/Target Support Files/Pods-Connnect/Pods-Connnect.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,13 +73,30 @@
 			isa = PBXGroup;
 			children = (
 				52EC39EE1DE01A1D007BFFE4 /* AppDelegate.swift */,
-				52EC39F01DE01A1D007BFFE4 /* ViewController.swift */,
 				52EC39F21DE01A1D007BFFE4 /* Main.storyboard */,
+				79CE7D8A1DE0D8C4006F9565 /* Send */,
+				79CE7D8B1DE0D8CA006F9565 /* Messages */,
 				52EC39F51DE01A1D007BFFE4 /* Assets.xcassets */,
 				52EC39F71DE01A1D007BFFE4 /* LaunchScreen.storyboard */,
 				52EC39FA1DE01A1D007BFFE4 /* Info.plist */,
 			);
 			path = Connnect;
+			sourceTree = "<group>";
+		};
+		79CE7D8A1DE0D8C4006F9565 /* Send */ = {
+			isa = PBXGroup;
+			children = (
+				79CE7D881DE0D8B7006F9565 /* Send.storyboard */,
+			);
+			name = Send;
+			sourceTree = "<group>";
+		};
+		79CE7D8B1DE0D8CA006F9565 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				79CE7D851DE0D8A6006F9565 /* Messages.storyboard */,
+			);
+			name = Messages;
 			sourceTree = "<group>";
 		};
 		85CF3BB3AF612B6614595EED /* Frameworks */ = {
@@ -153,7 +172,9 @@
 			files = (
 				52EC39F91DE01A1D007BFFE4 /* LaunchScreen.storyboard in Resources */,
 				52EC39F61DE01A1D007BFFE4 /* Assets.xcassets in Resources */,
+				79CE7D871DE0D8A6006F9565 /* Messages.storyboard in Resources */,
 				52EC39F41DE01A1D007BFFE4 /* Main.storyboard in Resources */,
+				79CE7D891DE0D8B7006F9565 /* Send.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,7 +233,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52EC39F11DE01A1D007BFFE4 /* ViewController.swift in Sources */,
 				52EC39EF1DE01A1D007BFFE4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,6 +254,14 @@
 				52EC39F81DE01A1D007BFFE4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		79CE7D851DE0D8A6006F9565 /* Messages.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79CE7D861DE0D8A6006F9565 /* Base */,
+			);
+			name = Messages.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
