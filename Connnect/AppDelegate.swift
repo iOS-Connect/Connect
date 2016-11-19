@@ -15,6 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PNObjectEventListener {
     var window: UIWindow?
     var client: PubNub!
 
+    static let shared = UIApplication.shared.delegate as! AppDelegate
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
