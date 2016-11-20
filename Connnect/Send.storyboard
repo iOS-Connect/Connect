@@ -23,17 +23,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Send a message" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hdP-vm-EQg">
-                                <rect key="frame" x="16" y="184" width="343" height="30"/>
+                                <rect key="frame" x="16" y="106" width="343" height="30"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="send"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="hdP-vm-EQg" firstAttribute="leading" secondItem="0Jl-7C-PgW" secondAttribute="leadingMargin" id="d8p-E6-gjg"/>
-                            <constraint firstItem="hdP-vm-EQg" firstAttribute="top" secondItem="fjj-eU-Tch" secondAttribute="bottom" constant="120" id="eZO-Lq-4Ga"/>
-                            <constraint firstItem="hdP-vm-EQg" firstAttribute="trailing" secondItem="0Jl-7C-PgW" secondAttribute="trailingMargin" id="ii6-4q-Tuh"/>
+                            <constraint firstItem="hdP-vm-EQg" firstAttribute="leading" secondItem="0Jl-7C-PgW" secondAttribute="leadingMargin" id="5mb-jA-tHX"/>
+                            <constraint firstItem="hdP-vm-EQg" firstAttribute="trailing" secondItem="0Jl-7C-PgW" secondAttribute="trailingMargin" id="Zj0-Pr-K2A"/>
+                            <constraint firstItem="hdP-vm-EQg" firstAttribute="top" secondItem="fjj-eU-Tch" secondAttribute="bottom" constant="42" id="btv-3W-I1s"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7U3-Ni-AGp"/>
