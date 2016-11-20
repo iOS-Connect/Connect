@@ -355,7 +355,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		5EE6BBDB934E4501E0DA7B08 /* [CP] Copy Pods Resources */ = {
@@ -474,7 +474,7 @@
 				DEVELOPMENT_TEAM = VY4FR2X9W5;
 				INFOPLIST_FILE = MessageIntention/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ios-connect.Connnect.MessageIntention";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ios-connect.Connect.MessageIntention";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -487,7 +487,7 @@
 				DEVELOPMENT_TEAM = VY4FR2X9W5;
 				INFOPLIST_FILE = MessageIntention/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ios-connect.Connnect.MessageIntention";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ios-connect.Connect.MessageIntention";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -500,7 +500,7 @@
 				DEVELOPMENT_TEAM = VY4FR2X9W5;
 				INFOPLIST_FILE = MessageIntentionUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ios-connect.Connnect.MessageIntentionUI";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ios-connect.Connect.MessageIntentionUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -513,7 +513,7 @@
 				DEVELOPMENT_TEAM = VY4FR2X9W5;
 				INFOPLIST_FILE = MessageIntentionUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ios-connect.Connnect.MessageIntentionUI";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ios-connect.Connect.MessageIntentionUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -617,13 +617,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 13C18047EDECA9777331726F /* Pods-Connnect.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Connnect/Connnect.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = VY4FR2X9W5;
 				INFOPLIST_FILE = Connnect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ios-connect.Connnect";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ios-connect.Connect";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -633,13 +633,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B264C5835CF8806D2E38FF09 /* Pods-Connnect.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Connnect/Connnect.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = VY4FR2X9W5;
 				INFOPLIST_FILE = Connnect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ios-connect.Connnect";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ios-connect.Connect";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -655,6 +655,7 @@
 				1748C49E1DE105D8005A0A74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1748C4A01DE105D8005A0A74 /* Build configuration list for PBXNativeTarget "MessageIntention" */ = {
 			isa = XCConfigurationList;
@@ -663,6 +664,7 @@
 				1748C49C1DE105D8005A0A74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		52EC39E61DE01A1D007BFFE4 /* Build configuration list for PBXProject "Connnect" */ = {
 			isa = XCConfigurationList;
