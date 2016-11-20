@@ -3,11 +3,6 @@ import MapKit
 import PubNub
 import CoreLocation
 
-enum PubNubKeys {
-    static let publish = "pub-c-655893d9-dc93-4586-8fc2-7de8885c522e"
-    static let subscribe = "sub-c-a73426c2-ae81-11e6-a7bb-0619f8945a4f"
-    static let secret = "sec-c-NmI2OTZjYTUtNjI0NC00ZGRlLThiMTktY2YzODUyNmZmY2M2"
-}
 
 enum AppColors {
     static let TenderShoots = UIColor(colorLiteralRed: 179/255,
