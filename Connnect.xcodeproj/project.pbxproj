@@ -25,6 +25,9 @@
 		79CE7D871DE0D8A6006F9565 /* Messages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79CE7D851DE0D8A6006F9565 /* Messages.storyboard */; };
 		79CE7D891DE0D8B7006F9565 /* Send.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79CE7D881DE0D8B7006F9565 /* Send.storyboard */; };
 		79CE7D8D1DE0E3C1006F9565 /* MessageTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CE7D8C1DE0E3C1006F9565 /* MessageTVC.swift */; };
+		79CE7D8F1DE10D9F006F9565 /* Geofencing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79CE7D8E1DE10D9F006F9565 /* Geofencing.storyboard */; };
+		79CE7D921DE1170B006F9565 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CE7D911DE1170B006F9565 /* SettingsViewController.swift */; };
+		79CE7D941DE119AC006F9565 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CE7D931DE119AC006F9565 /* MapViewController.swift */; };
 		9D83E1AB9385D3501648BB3C /* Pods_Connnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7D5401973B1A1FEA171B1A /* Pods_Connnect.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +89,9 @@
 		79CE7D861DE0D8A6006F9565 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Messages.storyboard; sourceTree = "<group>"; };
 		79CE7D881DE0D8B7006F9565 /* Send.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Send.storyboard; sourceTree = "<group>"; };
 		79CE7D8C1DE0E3C1006F9565 /* MessageTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTVC.swift; sourceTree = "<group>"; };
+		79CE7D8E1DE10D9F006F9565 /* Geofencing.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Geofencing.storyboard; sourceTree = "<group>"; };
+		79CE7D911DE1170B006F9565 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		79CE7D931DE119AC006F9565 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		B264C5835CF8806D2E38FF09 /* Pods-Connnect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Connnect.release.xcconfig"; path = "Pods/Target Support Files/Pods-Connnect/Pods-Connnect.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -178,6 +184,7 @@
 				52EC39F51DE01A1D007BFFE4 /* Assets.xcassets */,
 				52EC39F71DE01A1D007BFFE4 /* LaunchScreen.storyboard */,
 				52EC39FA1DE01A1D007BFFE4 /* Info.plist */,
+				79CE7D901DE10DAC006F9565 /* Geofencing */,
 			);
 			path = Connnect;
 			sourceTree = "<group>";
@@ -209,6 +216,16 @@
 				79CE7D8C1DE0E3C1006F9565 /* MessageTVC.swift */,
 			);
 			name = Messages;
+			sourceTree = "<group>";
+		};
+		79CE7D901DE10DAC006F9565 /* Geofencing */ = {
+			isa = PBXGroup;
+			children = (
+				79CE7D8E1DE10D9F006F9565 /* Geofencing.storyboard */,
+				79CE7D911DE1170B006F9565 /* SettingsViewController.swift */,
+				79CE7D931DE119AC006F9565 /* MapViewController.swift */,
+			);
+			name = Geofencing;
 			sourceTree = "<group>";
 		};
 		85CF3BB3AF612B6614595EED /* Frameworks */ = {
@@ -358,6 +375,7 @@
 				79CE7D871DE0D8A6006F9565 /* Messages.storyboard in Resources */,
 				52EC39F41DE01A1D007BFFE4 /* Main.storyboard in Resources */,
 				79CE7D891DE0D8B7006F9565 /* Send.storyboard in Resources */,
+				79CE7D8F1DE10D9F006F9565 /* Geofencing.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +456,8 @@
 				55495D121DE12CC900310CAD /* JoinViewController.swift in Sources */,
 				79CE7D8D1DE0E3C1006F9565 /* MessageTVC.swift in Sources */,
 				55495D141DE12FB700310CAD /* NewChannelViewController.swift in Sources */,
+				79CE7D941DE119AC006F9565 /* MapViewController.swift in Sources */,
+				79CE7D921DE1170B006F9565 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

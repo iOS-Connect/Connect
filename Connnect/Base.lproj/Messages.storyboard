@@ -52,11 +52,17 @@
                             <outlet property="delegate" destination="9zO-he-59O" id="T6Q-Pa-u5K"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="xc8-hZ-zT1"/>
+                    <navigationItem key="navigationItem" id="xc8-hZ-zT1">
+                        <barButtonItem key="rightBarButtonItem" title="Setting" id="fWw-Ij-BNE">
+                            <connections>
+                                <action selector="settingsButton:" destination="9zO-he-59O" id="Khe-QS-jtg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cmN-Bj-cdu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-924" y="-1821"/>
+            <point key="canvasLocation" x="-974" y="-1846"/>
         </scene>
     </scenes>
 </document>

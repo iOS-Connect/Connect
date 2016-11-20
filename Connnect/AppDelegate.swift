@@ -7,6 +7,17 @@ enum PubNubKeys {
     static let secret = "sec-c-NmI2OTZjYTUtNjI0NC00ZGRlLThiMTktY2YzODUyNmZmY2M2"
 }
 
+enum AppColors {
+    static let TenderShoots = UIColor(colorLiteralRed: 179/255,
+                                      green: 230/255, blue: 18/255, alpha: 1)
+    static let JadeCream = UIColor(colorLiteralRed: 97/255,
+                                   green: 189/255, blue: 147/255, alpha: 1)
+    static let Cayenne = UIColor(colorLiteralRed: 224/255,
+                                 green: 73/255, blue: 81/255, alpha: 1)
+    static let LightGray = UIColor(colorLiteralRed: 219/255,
+                                   green: 217/255, blue: 206/255, alpha: 1)
+}
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, PNObjectEventListener {
