@@ -13,10 +13,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 
     @IBOutlet public weak var mapView: MKMapView!
     
-    
     var regionRadius: Double = 500
     
-//    var locationManager = CLLocationManager()
     var locationManager = AppDelegate.shared.locationManager
     
     var workLocations: [CLCircularRegion]? {
