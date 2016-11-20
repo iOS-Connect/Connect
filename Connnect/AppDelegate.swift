@@ -1,10 +1,22 @@
 import UIKit
+import MapKit
 import PubNub
 
 enum PubNubKeys {
     static let publish = "pub-c-655893d9-dc93-4586-8fc2-7de8885c522e"
     static let subscribe = "sub-c-a73426c2-ae81-11e6-a7bb-0619f8945a4f"
     static let secret = "sec-c-NmI2OTZjYTUtNjI0NC00ZGRlLThiMTktY2YzODUyNmZmY2M2"
+}
+
+enum AppColors {
+    static let TenderShoots = UIColor(colorLiteralRed: 179/255,
+                                      green: 230/255, blue: 18/255, alpha: 1)
+    static let JadeCream = UIColor(colorLiteralRed: 97/255,
+                                   green: 189/255, blue: 147/255, alpha: 1)
+    static let Cayenne = UIColor(colorLiteralRed: 224/255,
+                                 green: 73/255, blue: 81/255, alpha: 1)
+    static let LightGray = UIColor(colorLiteralRed: 219/255,
+                                   green: 217/255, blue: 206/255, alpha: 1)
 }
 
 
@@ -161,4 +173,15 @@ extension AppDelegate {
         }
     }
 }
+
+extension AppDelegate: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        print("I just enetered this location")
+    }
+    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+        print("I just exited this location")
+    }
+}
+
+
 

@@ -5,6 +5,13 @@ class MessageTVC: UITableViewController {
     
     let notificationName = Notification.Name("NewMessage")
 
+    @IBAction func settingsButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Geofencing", bundle: nil)
+        let settingVC = storyboard.instantiateViewController(withIdentifier: "Settings")
+        self.navigationController?.pushViewController(settingVC, animated: true)
+        
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(MessageTVC.updateMessage), name: notificationName, object: nil)
