@@ -41,24 +41,9 @@ extension MessageTVC {
         let cell = tableView.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath)
         
         cell.textLabel?.text = AppDelegate.shared.myMessages[indexPath.row]
-//        
-//        cell.layer.cornerRadius = 20
-//        cell.clipsToBounds = true
-//        
-        
-        cell.contentView.backgroundColor = UIColor.clear
-        
-        let whiteRoundedView : UIView = UIView(frame: CGRect(x: 0, y: 10, width: self.view.frame.size.width, height: 120))
-        
-        whiteRoundedView.layer.masksToBounds = false
-        whiteRoundedView.layer.cornerRadius = 20.0
-        whiteRoundedView.layer.shadowOffset = CGSize(width: -1, height: 1)
-        whiteRoundedView.layer.shadowOpacity = 0.2
-        whiteRoundedView.clipsToBounds = true
-        
-        cell.contentView.addSubview(whiteRoundedView)
-        cell.contentView.sendSubview(toBack: whiteRoundedView)
-        cell.layer.cornerRadius = 20.0
+        cell.layer.cornerRadius = 20
+        cell.layer.borderWidth = 2.0
+        cell.layer.borderColor = UIColor.white.cgColor
         cell.clipsToBounds = true
         return cell
     }

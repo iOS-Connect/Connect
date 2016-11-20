@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PNObjectEventListener {
 
     static let shared = UIApplication.shared.delegate as! AppDelegate
     var locationManager = CLLocationManager()
-    let themeColor = AppColors.TenderShoots
+    let themeColor = AppColors.LightGray
     
 
 
@@ -35,9 +35,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PNObjectEventListener {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         //UIColors
+        window?.tintColor = AppColors.JadeCream
         UINavigationBar.appearance().barTintColor = themeColor
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
-        UIBarButtonItem.appearance().tintColor = UIColor.white
+//        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+//        UIBarButtonItem.appearance().tintColor = AppColors.JadeCream
         // Override point for customization after application launch.
         // Initialize and configure PubNub client instance
         let configuration = PNConfiguration(publishKey: PubNubKeys.publish, subscribeKey: PubNubKeys.subscribe)
