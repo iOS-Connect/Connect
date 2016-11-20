@@ -182,7 +182,7 @@ extension AppDelegate: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
         print("I just exited this location")
         let targetChannel = client.channels().last!
-        client.publish("Just Left Work", toChannel: targetChannel , withCompletion: nil)
+        client.publish("Just Left From Work", toChannel: targetChannel , withCompletion: nil)
     }
 }
 
