@@ -108,9 +108,7 @@ extension MapViewController: MKMapViewDelegate {
         addOverLayAtCoordinate(coord: view.annotation!.coordinate)
         
         
-        
-//        locationManager.startMonitoringRegionAtCoordinate(view.annotation!.coordinate,
-//                                                          withRadius: regionRadius)
+
         let myRegion = CLCircularRegion(center: view.annotation!.coordinate, radius: regionRadius, identifier: "regionIdentifier")
         locationManager.startMonitoring(for: myRegion)
         

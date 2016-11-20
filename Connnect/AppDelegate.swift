@@ -1,4 +1,5 @@
 import UIKit
+import MapKit
 import PubNub
 
 enum PubNubKeys {
@@ -172,4 +173,15 @@ extension AppDelegate {
         }
     }
 }
+
+extension AppDelegate: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        print("I just enetered this location")
+    }
+    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+        print("I just exited this location")
+    }
+}
+
+
 
