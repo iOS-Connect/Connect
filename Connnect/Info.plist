@@ -23,9 +23,9 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>We need your location please</string>
+	<string>We need your always location please</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>We need your permission pleasse</string>
+	<string>We need your in use location please</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

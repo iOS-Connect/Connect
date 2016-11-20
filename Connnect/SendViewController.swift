@@ -19,6 +19,7 @@ class SendViewController: UIViewController {
 
     override func viewDidLoad() {
         navigationItem.title = "Send Message"
+        
 
     }
 
