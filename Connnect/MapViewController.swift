@@ -26,7 +26,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         MapViewState.hasBeenZoomed = false
         locationManager.delegate = AppDelegate.shared
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
         mapView.showsUserLocation = true
@@ -123,12 +122,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     
 }
-
-//extension MapViewController: MKMapViewDelegate {
-//    
-//
-//    
-//}
 
 extension MKCircle {
     var defaultRenderer: MKCircleRenderer {
