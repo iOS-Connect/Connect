@@ -43,7 +43,7 @@ extension MessageTVC {
         cell.textLabel?.text = AppDelegate.shared.myMessages[indexPath.row]
         cell.layer.cornerRadius = 20
         cell.layer.borderWidth = 2.0
-        cell.layer.borderColor = UIColor.white.cgColor
+        cell.layer.borderColor = AppColors.LightGray.cgColor
         cell.clipsToBounds = true
         return cell
     }
