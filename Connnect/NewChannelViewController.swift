@@ -9,7 +9,6 @@
 import UIKit
 
 class NewChannelViewController: UIViewController {
-
     
     @IBOutlet weak var newButton: UIButton!
     @IBOutlet weak var newTextField: UITextField!
@@ -21,14 +20,19 @@ class NewChannelViewController: UIViewController {
         newButton.layer.cornerRadius = 10
         newButton.layer.borderWidth = 2
         newButton.layer.borderColor = self.view.tintColor.cgColor
-        
-        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func newChannel(sender: UIButton) {
+        guard let newChannelName = newTextField.text else { return }
+        AppDelegate.shared.client.subscribe(
+            toChannels: [newChannelName], withPresence: true)
+        var current = (UserDefaults.standard.array(forKey: channelKey) ?? [Any]()) as? [String]
+        if current == nil {
+            current = [String]()
+        }
+        current!.append(newChannelName)
+        UserDefaults.standard.set(current!, forKey: channelKey)
+        AppDelegate.shared.openMainViewController()
     }
-    
 
 }

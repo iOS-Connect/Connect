@@ -9,6 +9,8 @@
 import UIKit
 import PubNub
 
+let channelKey = "CHANNELS"
+
 enum PubNubKeys {
     static let publish = "pub-c-655893d9-dc93-4586-8fc2-7de8885c522e"
     static let subscribe = "sub-c-a73426c2-ae81-11e6-a7bb-0619f8945a4f"
@@ -27,8 +29,14 @@ class PubNubHandler : NSObject, PNObjectEventListener {
         super.init()
         self.client.add(self)
         self.client.subscribe(toChannels: [self.channel], withPresence: true)
+        var current = (UserDefaults.standard.array(forKey: channelKey) ?? [Any]()) as? [String]
+        if current == nil {
+            current = [String]()
+        }
+        current!.append(self.channel)
+        UserDefaults.standard.set(current!, forKey: "CHANNELS")
     }
-    
+
     func setMessage(msg: String) -> Void {
         print("set message \(msg)")
         self.message = msg
@@ -51,8 +59,14 @@ class PubNubHandler : NSObject, PNObjectEventListener {
     func setChannel(channel: String) {
         self.channel = channel
         self.client.subscribe(toChannels: [self.channel], withPresence: true)
+        var current = (UserDefaults.standard.array(forKey: channelKey) ?? [Any]()) as? [String]
+        if current == nil {
+            current = [String]()
+        }
+        current!.append(self.channel)
+        UserDefaults.standard.set(current!, forKey: channelKey)
     }
-    
+
     func client(_ client: PubNub, didReceiveMessage message: PNMessageResult) {
         print("didReceiveMessage")
         dump(message)

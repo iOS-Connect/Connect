@@ -15,15 +15,13 @@ enum AppColors {
                                    green: 217/255, blue: 206/255, alpha: 1)
 }
 
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, PNObjectEventListener {
 
     static let shared = UIApplication.shared.delegate as! AppDelegate
+
     var locationManager = CLLocationManager()
     let themeColor = AppColors.LightGray
-    
-
 
     
     var window: UIWindow?
@@ -44,11 +42,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PNObjectEventListener {
         let configuration = PNConfiguration(publishKey: PubNubKeys.publish, subscribeKey: PubNubKeys.subscribe)
         self.client = PubNub.client(with: configuration)
         self.client.add(self)
-        
-        // Subscribe to demo channel with presence observation
-        self.client.subscribe(toChannels: ["my_channel"], withPresence: true)
+
+        let currentChannels = (UserDefaults.standard.array(forKey: channelKey) ?? []) as! [String]
+        if currentChannels.isEmpty {
+            let newChannelStorybard = UIStoryboard(name: "EditChannel", bundle: nil)
+            window = UIWindow(frame: UIScreen.main.bounds)
+            window?.rootViewController = newChannelStorybard.instantiateInitialViewController()!
+        } else {
+            AppDelegate.shared.client.subscribe(toChannels: currentChannels, withPresence: true)
+            var current = (UserDefaults.standard.array(forKey: channelKey) ?? [Any]()) as? [String]
+            if current == nil {
+                current = [String]()
+            }
+            for channel in currentChannels {
+                current!.append(channel)
+            }
+            UserDefaults.standard.set(current!, forKey: channelKey)
+        }
+
         return true
     }
+
+    func openMainViewController() {
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        window?.rootViewController = main.instantiateInitialViewController()
+    }
+
 
 }
 

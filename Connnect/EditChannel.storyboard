@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9mf-jd-yWs">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ath-6A-2uY">
-                                <rect key="frame" x="93" y="382" width="191" height="32"/>
+                                <rect key="frame" x="93" y="382" width="190" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="New"/>
                                 <connections>
@@ -31,7 +31,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connect" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4n-Qk-rFb">
-                                <rect key="frame" x="58" y="72" width="260" height="62"/>
+                                <rect key="frame" x="58" y="72" width="259" height="62"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="62" id="gTF-JE-FL7"/>
                                 </constraints>
@@ -40,7 +40,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Usr-dr-L8i">
-                                <rect key="frame" x="93" y="332" width="191" height="35"/>
+                                <rect key="frame" x="93" y="332" width="190" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="jM1-J2-M40"/>
                                 </constraints>
@@ -92,7 +92,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="186" id="eJv-Sy-78K"/>
                                 </constraints>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -108,6 +108,9 @@
                                     <constraint firstAttribute="width" constant="78" id="k2C-Bz-bIf"/>
                                 </constraints>
                                 <state key="normal" title="Join"/>
+                                <connections>
+                                    <action selector="newChannelWithSender:" destination="fWL-YL-E8z" eventType="touchUpInside" id="kap-QB-5yO"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -138,7 +141,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="976.79999999999995" y="-75.112443778110944"/>
+            <point key="canvasLocation" x="1063" y="-504"/>
         </scene>
         <!--New Channel View Controller-->
         <scene sceneID="7kW-ch-PKl">
@@ -160,12 +163,15 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sj5-TO-DVN">
-                                <rect key="frame" x="139" y="245" width="96" height="40"/>
+                                <rect key="frame" x="139.5" y="245" width="96" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="QUG-Ky-IAs"/>
                                     <constraint firstAttribute="width" constant="96" id="p90-2d-bPt"/>
                                 </constraints>
                                 <state key="normal" title="New"/>
+                                <connections>
+                                    <action selector="newChannelWithSender:" destination="Wu7-mm-kEQ" eventType="touchUpInside" id="4BU-Ls-2Jf"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vZA-oC-5mh">
                                 <rect key="frame" x="75" y="189" width="224" height="30"/>
@@ -194,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IlK-mM-mmN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1704.8" y="-75.112443778110944"/>
+            <point key="canvasLocation" x="1063" y="240"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eoQ-EA-fJ3">
