@@ -91,7 +91,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                 } else {
                     //zoom the map to the users location
                     //not sure how far away from work the person is, so give them a good zoom 2km
-                    let region = MKCoordinateRegionMakeWithDistance(userCoordinates, 2000, 2000)
+                    let region = MKCoordinateRegionMakeWithDistance(userCoordinates, 10000, 10000)
                     mapView.setRegion(region, animated: true)
                 }
             }
