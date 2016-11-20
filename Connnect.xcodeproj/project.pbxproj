@@ -13,6 +13,10 @@
 		1748C4931DE105D8005A0A74 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1748C4911DE105D8005A0A74 /* MainInterface.storyboard */; };
 		1748C4971DE105D8005A0A74 /* MessageIntentionUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1748C48B1DE105D8005A0A74 /* MessageIntentionUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1748C49A1DE105D8005A0A74 /* MessageIntention.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1748C4821DE105D8005A0A74 /* MessageIntention.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1748C4A81DE215E3005A0A74 /* PubNubHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1748C4A71DE215E3005A0A74 /* PubNubHandler.swift */; };
+		1748C4A91DE215E3005A0A74 /* PubNubHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1748C4A71DE215E3005A0A74 /* PubNubHandler.swift */; };
+		1748C4AA1DE215E3005A0A74 /* PubNubHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1748C4A71DE215E3005A0A74 /* PubNubHandler.swift */; };
+		1D9BE9FBD3BAF7B083BAF8EE /* Pods_MessageIntentionUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E32E91BFE215CD0E2AC555 /* Pods_MessageIntentionUI.framework */; };
 		52BB49661DE0E42C00BD0CC7 /* SendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BB49651DE0E42C00BD0CC7 /* SendViewController.swift */; };
 		52EC39EF1DE01A1D007BFFE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EC39EE1DE01A1D007BFFE4 /* AppDelegate.swift */; };
 		52EC39F41DE01A1D007BFFE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52EC39F21DE01A1D007BFFE4 /* Main.storyboard */; };
@@ -28,6 +32,7 @@
 		79CE7D8F1DE10D9F006F9565 /* Geofencing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79CE7D8E1DE10D9F006F9565 /* Geofencing.storyboard */; };
 		79CE7D921DE1170B006F9565 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CE7D911DE1170B006F9565 /* SettingsViewController.swift */; };
 		79CE7D941DE119AC006F9565 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CE7D931DE119AC006F9565 /* MapViewController.swift */; };
+		83110E0799CCAC7FBC03C637 /* Pods_MessageIntention.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DBFAE6E545E50EDE791B354 /* Pods_MessageIntention.framework */; };
 		9D83E1AB9385D3501648BB3C /* Pods_Connnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7D5401973B1A1FEA171B1A /* Pods_Connnect.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +79,9 @@
 		1748C4921DE105D8005A0A74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		1748C4941DE105D8005A0A74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1748C4A21DE105F1005A0A74 /* Connnect.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Connnect.entitlements; sourceTree = "<group>"; };
+		1748C4A71DE215E3005A0A74 /* PubNubHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PubNubHandler.swift; sourceTree = "<group>"; };
+		1DBFAE6E545E50EDE791B354 /* Pods_MessageIntention.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MessageIntention.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		29BE92469E67697D41CBEB0F /* Pods-MessageIntentionUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessageIntentionUI.release.xcconfig"; path = "Pods/Target Support Files/Pods-MessageIntentionUI/Pods-MessageIntentionUI.release.xcconfig"; sourceTree = "<group>"; };
 		52BB49651DE0E42C00BD0CC7 /* SendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendViewController.swift; sourceTree = "<group>"; };
 		52EC39EB1DE01A1D007BFFE4 /* Connnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Connnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52EC39EE1DE01A1D007BFFE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +101,10 @@
 		79CE7D911DE1170B006F9565 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		79CE7D931DE119AC006F9565 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		B264C5835CF8806D2E38FF09 /* Pods-Connnect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Connnect.release.xcconfig"; path = "Pods/Target Support Files/Pods-Connnect/Pods-Connnect.release.xcconfig"; sourceTree = "<group>"; };
+		B52E2DA30A4B4821BF5E0CFE /* Pods-MessageIntentionUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessageIntentionUI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MessageIntentionUI/Pods-MessageIntentionUI.debug.xcconfig"; sourceTree = "<group>"; };
+		B5E527358A75E9EE07E9825D /* Pods-MessageIntention.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessageIntention.release.xcconfig"; path = "Pods/Target Support Files/Pods-MessageIntention/Pods-MessageIntention.release.xcconfig"; sourceTree = "<group>"; };
+		E3E32E91BFE215CD0E2AC555 /* Pods_MessageIntentionUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MessageIntentionUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F14A0549CED8703FED4F9284 /* Pods-MessageIntention.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessageIntention.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MessageIntention/Pods-MessageIntention.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83110E0799CCAC7FBC03C637 /* Pods_MessageIntention.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +121,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1748C48D1DE105D8005A0A74 /* IntentsUI.framework in Frameworks */,
+				1D9BE9FBD3BAF7B083BAF8EE /* Pods_MessageIntentionUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +160,10 @@
 			children = (
 				13C18047EDECA9777331726F /* Pods-Connnect.debug.xcconfig */,
 				B264C5835CF8806D2E38FF09 /* Pods-Connnect.release.xcconfig */,
+				F14A0549CED8703FED4F9284 /* Pods-MessageIntention.debug.xcconfig */,
+				B5E527358A75E9EE07E9825D /* Pods-MessageIntention.release.xcconfig */,
+				B52E2DA30A4B4821BF5E0CFE /* Pods-MessageIntentionUI.debug.xcconfig */,
+				29BE92469E67697D41CBEB0F /* Pods-MessageIntentionUI.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -177,6 +195,7 @@
 			children = (
 				5530829C1DE123F300472B6F /* EditChannel */,
 				1748C4A21DE105F1005A0A74 /* Connnect.entitlements */,
+				1748C4A71DE215E3005A0A74 /* PubNubHandler.swift */,
 				52EC39EE1DE01A1D007BFFE4 /* AppDelegate.swift */,
 				52EC39F21DE01A1D007BFFE4 /* Main.storyboard */,
 				79CE7D8A1DE0D8C4006F9565 /* Send */,
@@ -233,6 +252,8 @@
 			children = (
 				6E7D5401973B1A1FEA171B1A /* Pods_Connnect.framework */,
 				1748C48C1DE105D8005A0A74 /* IntentsUI.framework */,
+				1DBFAE6E545E50EDE791B354 /* Pods_MessageIntention.framework */,
+				E3E32E91BFE215CD0E2AC555 /* Pods_MessageIntentionUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -244,9 +265,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1748C4A01DE105D8005A0A74 /* Build configuration list for PBXNativeTarget "MessageIntention" */;
 			buildPhases = (
+				600B8D31B609D58643E81F1A /* [CP] Check Pods Manifest.lock */,
 				1748C47E1DE105D8005A0A74 /* Sources */,
 				1748C47F1DE105D8005A0A74 /* Frameworks */,
 				1748C4801DE105D8005A0A74 /* Resources */,
+				C35FC1DF477DF6B5CDEBA668 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -261,9 +284,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1748C49F1DE105D8005A0A74 /* Build configuration list for PBXNativeTarget "MessageIntentionUI" */;
 			buildPhases = (
+				6C833DE28FA63F65C5FF6AEC /* [CP] Check Pods Manifest.lock */,
 				1748C4871DE105D8005A0A74 /* Sources */,
 				1748C4881DE105D8005A0A74 /* Frameworks */,
 				1748C4891DE105D8005A0A74 /* Resources */,
+				A02556DB017C40383585B1FD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -412,6 +437,51 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Connnect/Pods-Connnect-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		600B8D31B609D58643E81F1A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6C833DE28FA63F65C5FF6AEC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A02556DB017C40383585B1FD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MessageIntentionUI/Pods-MessageIntentionUI-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B422EE42A86AA0C3AFCFFF7C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -427,6 +497,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Connnect/Pods-Connnect-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C35FC1DF477DF6B5CDEBA668 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MessageIntention/Pods-MessageIntention-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -434,6 +519,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1748C4A91DE215E3005A0A74 /* PubNubHandler.swift in Sources */,
 				1748C4851DE105D8005A0A74 /* IntentHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,6 +528,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1748C4AA1DE215E3005A0A74 /* PubNubHandler.swift in Sources */,
 				1748C4901DE105D8005A0A74 /* IntentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -455,6 +542,7 @@
 				52EC39EF1DE01A1D007BFFE4 /* AppDelegate.swift in Sources */,
 				55495D121DE12CC900310CAD /* JoinViewController.swift in Sources */,
 				79CE7D8D1DE0E3C1006F9565 /* MessageTVC.swift in Sources */,
+				1748C4A81DE215E3005A0A74 /* PubNubHandler.swift in Sources */,
 				55495D141DE12FB700310CAD /* NewChannelViewController.swift in Sources */,
 				79CE7D941DE119AC006F9565 /* MapViewController.swift in Sources */,
 				79CE7D921DE1170B006F9565 /* SettingsViewController.swift in Sources */,
@@ -514,6 +602,7 @@
 /* Begin XCBuildConfiguration section */
 		1748C49B1DE105D8005A0A74 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F14A0549CED8703FED4F9284 /* Pods-MessageIntention.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = MessageIntention/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -528,6 +617,7 @@
 		};
 		1748C49C1DE105D8005A0A74 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5E527358A75E9EE07E9825D /* Pods-MessageIntention.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = MessageIntention/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -542,6 +632,7 @@
 		};
 		1748C49D1DE105D8005A0A74 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B52E2DA30A4B4821BF5E0CFE /* Pods-MessageIntentionUI.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = MessageIntentionUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -556,6 +647,7 @@
 		};
 		1748C49E1DE105D8005A0A74 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29BE92469E67697D41CBEB0F /* Pods-MessageIntentionUI.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = MessageIntentionUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -609,7 +701,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -654,7 +746,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
