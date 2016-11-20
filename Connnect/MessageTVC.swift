@@ -15,6 +15,9 @@ class MessageTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(MessageTVC.updateMessage), name: notificationName, object: nil)
+        tableView.tableFooterView = UIView()
+        let imageView = UIImageView(image: UIImage(named: "NewBack"))
+        self.tableView.backgroundView = imageView
 
     }
     
@@ -28,6 +31,7 @@ class MessageTVC: UITableViewController {
 
 
 extension MessageTVC {
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return AppDelegate.shared.myMessages.count
     }
@@ -37,7 +41,11 @@ extension MessageTVC {
         let cell = tableView.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath)
         
         cell.textLabel?.text = AppDelegate.shared.myMessages[indexPath.row]
-        
+        cell.layer.cornerRadius = 20
+        cell.layer.borderWidth = 2.0
+        cell.layer.borderColor = AppColors.LightGray.cgColor
+        cell.clipsToBounds = true
         return cell
     }
+    
 }
