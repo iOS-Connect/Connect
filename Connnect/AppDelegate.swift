@@ -1,6 +1,7 @@
 import UIKit
 import MapKit
 import PubNub
+import CoreLocation
 
 enum PubNubKeys {
     static let publish = "pub-c-655893d9-dc93-4586-8fc2-7de8885c522e"
@@ -24,6 +25,8 @@ enum AppColors {
 class AppDelegate: UIResponder, UIApplicationDelegate, PNObjectEventListener {
 
     static let shared = UIApplication.shared.delegate as! AppDelegate
+    var locationManager = CLLocationManager()
+
     
     var window: UIWindow?
     var client: PubNub!
@@ -175,6 +178,7 @@ extension AppDelegate {
 }
 
 extension AppDelegate: CLLocationManagerDelegate {
+
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
         print("I just enetered this location")
     }
