@@ -16,14 +16,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     var regionRadius: Double = 5000
     
-    var locationManager: CLLocationManager {
-        let locationManager = CLLocationManager()
-        locationManager.delegate = AppDelegate.shared
-        
-        return locationManager
-        
-    }
-    
+    var locationManager = CLLocationManager()
     
     var workLocations: [CLCircularRegion]? {
         return locationManager.monitoredRegions.flatMap { $0 as? CLCircularRegion }
@@ -32,14 +25,16 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     override public func viewDidLoad() {
         super.viewDidLoad()
         MapViewState.hasBeenZoomed = false
-        //reset the state so we can zoom in on the user once, per page load
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        self.locationManager.requestWhenInUseAuthorization()
-        self.mapView.showsUserLocation = true
-        
+        locationManager.delegate = AppDelegate.shared
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+        mapView.showsUserLocation = true
         mapView.delegate = self
         drawWorkLocations(workLocations: workLocations)
     }
+    
+    
     
 
     @IBAction func handleLongPress(sender: UILongPressGestureRecognizer) {
