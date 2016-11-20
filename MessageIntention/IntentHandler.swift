@@ -30,8 +30,9 @@ class IntentHandler: INExtension, INSendMessageIntentHandling, INSearchForMessag
     
     // Implement resolution methods to provide additional information about your intent (optional).
     func resolveRecipients(forSendMessage intent: INSendMessageIntent, with completion: @escaping ([INPersonResolutionResult]) -> Void) {
+
         if let recipients = intent.recipients {
-            
+            print("Hello: \(recipients)")
             // If no recipients were provided we'll need to prompt for a value.
             if recipients.count == 0 {
                 completion([INPersonResolutionResult.needsValue()])
