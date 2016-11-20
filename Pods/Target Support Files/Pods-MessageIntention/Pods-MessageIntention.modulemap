@@ -1,0 +1,6 @@
+framework module Pods_MessageIntention {
+  umbrella header "Pods-MessageIntention-umbrella.h"
+
+  export *
+  module * { export * }
+}
