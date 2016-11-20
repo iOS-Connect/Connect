@@ -19,7 +19,9 @@ class SendViewController: UIViewController {
 
     override func viewDidLoad() {
         navigationItem.title = "Send Message"
-        
+
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "NewBack")!)
+
 
     }
 
