@@ -1,10 +1,8 @@
 # Connect
 An app for connecting you with the people who care about you.
 
-# Needs
- - Login and find people - This is where the channel magic comes in.
-    - Probably pubnub, will be good for this
- - Leaving notifications, Possibly as the start of a chat message.
- - Could you query the location of a friend?
- - Siri Kit or just text to speech while traveling. 
- - Family Birthday reminders. (Reminder that it is coming up)
+Connect is all about keeping you up to date with locations and updates. You can share your arrival's and departures from important places like work and home. You can also share a quick update with our amazing messaging system.
+
+# Hands Free
+
+We also have a thorough integration with Siri to allow you to read and send messages totally hands free! This makes a great way to share with your connects quickly and on the go. 
