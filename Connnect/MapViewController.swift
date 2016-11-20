@@ -14,9 +14,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     @IBOutlet public weak var mapView: MKMapView!
     
     
-    var regionRadius: Double = 5000
+    var regionRadius: Double = 500
     
-    var locationManager = CLLocationManager()
+//    var locationManager = CLLocationManager()
+    var locationManager = AppDelegate.shared.locationManager
     
     var workLocations: [CLCircularRegion]? {
         return locationManager.monitoredRegions.flatMap { $0 as? CLCircularRegion }
@@ -33,8 +34,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         mapView.delegate = self
         drawWorkLocations(workLocations: workLocations)
     }
-    
-    
     
 
     @IBAction func handleLongPress(sender: UILongPressGestureRecognizer) {
