@@ -8,6 +8,9 @@
 
 import Intents
 
+// not optimal but works for the moment
+let pnh = PubNubHandler()
+
 // As an example, this class is set up to handle Message intents.
 // You will want to replace this or add other intents as appropriate.
 // The intents you wish to handle must be declared in the extension's Info.plist.
@@ -20,52 +23,49 @@ import Intents
 class IntentHandler: INExtension, INSendMessageIntentHandling, INSearchForMessagesIntentHandling, INSetMessageAttributeIntentHandling {
     
     override func handler(for intent: INIntent) -> Any {
-        // This is the default implementation.  If you want different objects to handle different intents,
-        // you can override this and return the handler you want for that particular intent.
-        
         return self
     }
     
-    // MARK: - INSendMessageIntentHandling
-    
-    // Implement resolution methods to provide additional information about your intent (optional).
     func resolveRecipients(forSendMessage intent: INSendMessageIntent, with completion: @escaping ([INPersonResolutionResult]) -> Void) {
 
+        var resolutionResults = [INPersonResolutionResult]()
+        //check if are addresing one of the default channels
+        //else default to "me"
         if let recipients = intent.recipients {
-            print("Hello: \(recipients)")
-            // If no recipients were provided we'll need to prompt for a value.
             if recipients.count == 0 {
                 completion([INPersonResolutionResult.needsValue()])
                 return
             }
+            //later we would want to allow more than one recipient channel
+            //do we know the channel
+            // if not default to "me"
+            pnh.setChannel(channel: "my_channel")
             
-            var resolutionResults = [INPersonResolutionResult]()
-            for recipient in recipients {
-                let matchingContacts = [recipient] // Implement your contact matching logic here to create an array of matching contacts
-                switch matchingContacts.count {
-                case 2  ... Int.max:
-                    // We need Siri's help to ask user to pick one from the matches.
-                    resolutionResults += [INPersonResolutionResult.disambiguation(with: matchingContacts)]
-                    
-                case 1:
-                    // We have exactly one matching contact
-                    resolutionResults += [INPersonResolutionResult.success(with: recipient)]
-                    
-                case 0:
-                    // We have no contacts matching the description provided
-                    resolutionResults += [INPersonResolutionResult.unsupported()]
-                    
-                default:
+            print("Call resolve recipients")
+            dump(recipients.first?.displayName)
+            
+            
+
+            switch recipients.count {
+            case 1:
+                resolutionResults += [INPersonResolutionResult.success(with: recipients.first!)]
+                break
+            case 0:
+                resolutionResults += [INPersonResolutionResult.unsupported()]
                     break
-                    
-                }
+            default:
+                resolutionResults += [INPersonResolutionResult.success(with: recipients.first!)]
+                break
             }
-            completion(resolutionResults)
         }
+        
+        completion(resolutionResults)
     }
     
     func resolveContent(forSendMessage intent: INSendMessageIntent, with completion: @escaping (INStringResolutionResult) -> Void) {
+        //check if we just forward a message or want to perform an action
         if let text = intent.content, !text.isEmpty {
+            pnh.setMessage(msg: text)
             completion(INStringResolutionResult.success(with: text))
         } else {
             completion(INStringResolutionResult.needsValue())
@@ -73,7 +73,7 @@ class IntentHandler: INExtension, INSendMessageIntentHandling, INSearchForMessag
     }
     
     // Once resolution is completed, perform validation on the intent and provide confirmation (optional).
-    
+    // we probably don't use this
     func confirm(sendMessage intent: INSendMessageIntent, completion: @escaping (INSendMessageIntentResponse) -> Void) {
         // Verify user is authenticated and your app is ready to send a message.
         
@@ -86,7 +86,8 @@ class IntentHandler: INExtension, INSendMessageIntentHandling, INSearchForMessag
     
     func handle(sendMessage intent: INSendMessageIntent, completion: @escaping (INSendMessageIntentResponse) -> Void) {
         // Implement your application logic to send a message here.
-        
+        dump(intent)
+        pnh.sendMessage()
         let userActivity = NSUserActivity(activityType: NSStringFromClass(INSendMessageIntent.self))
         let response = INSendMessageIntentResponse(code: .success, userActivity: userActivity)
         completion(response)
@@ -95,7 +96,6 @@ class IntentHandler: INExtension, INSendMessageIntentHandling, INSearchForMessag
     // Implement handlers for each intent you wish to handle.  As an example for messages, you may wish to also handle searchForMessages and setMessageAttributes.
     
     // MARK: - INSearchForMessagesIntentHandling
-    
     func handle(searchForMessages intent: INSearchForMessagesIntent, completion: @escaping (INSearchForMessagesIntentResponse) -> Void) {
         // Implement your application logic to find a message that matches the information in the intent.
         

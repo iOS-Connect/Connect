@@ -8,3 +8,17 @@ target 'Connnect' do
   pod 'PubNub'
 
 end
+target 'MessageIntention' do
+  # Comment this line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  pod 'PubNub'
+
+end
+target 'MessageIntentionUI' do
+  # Comment this line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  pod 'PubNub'
+
+end
