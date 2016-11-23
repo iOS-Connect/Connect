@@ -16,10 +16,7 @@ class JoinViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        joinButton.backgroundColor = .clear
-        joinButton.layer.cornerRadius = 10
-        joinButton.layer.borderWidth = 2
-        joinButton.layer.borderColor = self.view.tintColor.cgColor
+     
     }
 
     @IBAction func newChannel(sender: UIButton) {

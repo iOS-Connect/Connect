@@ -16,10 +16,6 @@ class NewChannelViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        newButton.backgroundColor = .clear
-        newButton.layer.cornerRadius = 10
-        newButton.layer.borderWidth = 2
-        newButton.layer.borderColor = self.view.tintColor.cgColor
     }
 
     @IBAction func newChannel(sender: UIButton) {
