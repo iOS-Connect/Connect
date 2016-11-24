@@ -26,7 +26,7 @@
 		5530829B1DE123C900472B6F /* EditChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5530829A1DE123C900472B6F /* EditChannelViewController.swift */; };
 		55495D121DE12CC900310CAD /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55495D111DE12CC900310CAD /* JoinViewController.swift */; };
 		55495D141DE12FB700310CAD /* NewChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55495D131DE12FB700310CAD /* NewChannelViewController.swift */; };
-		558424361DE57BB0006C0AE2 /* CustomUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558424351DE57BB0006C0AE2 /* CustomUIButton.swift */; };
+		558424361DE57BB0006C0AE2 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558424351DE57BB0006C0AE2 /* RoundedButton.swift */; };
 		79CE7D871DE0D8A6006F9565 /* Messages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79CE7D851DE0D8A6006F9565 /* Messages.storyboard */; };
 		79CE7D891DE0D8B7006F9565 /* Send.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79CE7D881DE0D8B7006F9565 /* Send.storyboard */; };
 		79CE7D8D1DE0E3C1006F9565 /* MessageTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CE7D8C1DE0E3C1006F9565 /* MessageTVC.swift */; };
@@ -94,7 +94,7 @@
 		5530829A1DE123C900472B6F /* EditChannelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditChannelViewController.swift; sourceTree = "<group>"; };
 		55495D111DE12CC900310CAD /* JoinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		55495D131DE12FB700310CAD /* NewChannelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewChannelViewController.swift; sourceTree = "<group>"; };
-		558424351DE57BB0006C0AE2 /* CustomUIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomUIButton.swift; path = ../CustomUIButton.swift; sourceTree = "<group>"; };
+		558424351DE57BB0006C0AE2 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundedButton.swift; path = ../RoundedButton.swift; sourceTree = "<group>"; };
 		6E7D5401973B1A1FEA171B1A /* Pods_Connnect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Connnect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79CE7D861DE0D8A6006F9565 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Messages.storyboard; sourceTree = "<group>"; };
 		79CE7D881DE0D8B7006F9565 /* Send.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Send.storyboard; sourceTree = "<group>"; };
@@ -217,7 +217,7 @@
 				5530829A1DE123C900472B6F /* EditChannelViewController.swift */,
 				55495D111DE12CC900310CAD /* JoinViewController.swift */,
 				55495D131DE12FB700310CAD /* NewChannelViewController.swift */,
-				558424351DE57BB0006C0AE2 /* CustomUIButton.swift */,
+				558424351DE57BB0006C0AE2 /* RoundedButton.swift */,
 			);
 			name = EditChannel;
 			sourceTree = "<group>";
@@ -652,7 +652,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				558424361DE57BB0006C0AE2 /* CustomUIButton.swift in Sources */,
+				558424361DE57BB0006C0AE2 /* RoundedButton.swift in Sources */,
 				5530829B1DE123C900472B6F /* EditChannelViewController.swift in Sources */,
 				52BB49661DE0E42C00BD0CC7 /* SendViewController.swift in Sources */,
 				52EC39EF1DE01A1D007BFFE4 /* AppDelegate.swift in Sources */,

@@ -13,12 +13,6 @@ class JoinViewController: UIViewController {
     @IBOutlet weak var joinTextField: UITextField!
     @IBOutlet weak var joinButton: UIButton!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-     
-    }
-
     @IBAction func newChannel(sender: UIButton) {
         guard let newChannelName = joinTextField.text else { return }
 

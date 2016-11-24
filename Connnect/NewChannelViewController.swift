@@ -13,11 +13,6 @@ class NewChannelViewController: UIViewController {
     @IBOutlet weak var newButton: UIButton!
     @IBOutlet weak var newTextField: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
-
     @IBAction func newChannel(sender: UIButton) {
         guard let newChannelName = newTextField.text else { return }
         AppDelegate.shared.client.subscribe(
