@@ -13,15 +13,6 @@ class NewChannelViewController: UIViewController {
     @IBOutlet weak var newButton: UIButton!
     @IBOutlet weak var newTextField: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        newButton.backgroundColor = .clear
-        newButton.layer.cornerRadius = 10
-        newButton.layer.borderWidth = 2
-        newButton.layer.borderColor = self.view.tintColor.cgColor
-    }
-
     @IBAction func newChannel(sender: UIButton) {
         guard let newChannelName = newTextField.text else { return }
         AppDelegate.shared.client.subscribe(

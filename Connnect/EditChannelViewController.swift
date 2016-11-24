@@ -17,17 +17,7 @@ class EditChannelViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        
-        joinButton.backgroundColor = .clear
-        joinButton.layer.cornerRadius = 10
-        joinButton.layer.borderWidth = 2
-        joinButton.layer.borderColor = self.view.tintColor.cgColor
-        
-        newButton.backgroundColor = .clear
-        newButton.layer.cornerRadius = 10
-        newButton.layer.borderWidth = 2
-        newButton.layer.borderColor = self.view.tintColor.cgColor
-        
+            
         
     }
     
