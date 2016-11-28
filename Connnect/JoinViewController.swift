@@ -16,7 +16,7 @@ class JoinViewController: UIViewController {
     @IBAction func newChannel(sender: UIButton) {
         guard let newChannelName = joinTextField.text else { return }
 
-        AppDelegate.shared.client.subscribe(toChannels: [newChannelName], withPresence: true)
+        pnh.client.subscribe(toChannels: [newChannelName], withPresence: true)
         var current = (UserDefaults.standard.array(forKey: channelKey) ?? [Any]()) as? [String]
         if current == nil {
             current = [String]()

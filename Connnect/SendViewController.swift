@@ -5,11 +5,8 @@ class SendViewController: UIViewController {
     lazy var textDelegate:MessageTextDelegate = {
         let del = MessageTextDelegate(msgHandler: { (message) in
             
-            let pub = AppDelegate.shared.client
-            
-            let targetChannel = pub?.channels().last!
-
-            pub?.publish(message, toChannel:targetChannel!,
+            let targetChannel = pnh.client.channels().last!
+            pnh.client.publish(message, toChannel:targetChannel,
                          compressed: false, withCompletion: nil)
         })
         return del

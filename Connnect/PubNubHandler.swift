@@ -20,7 +20,8 @@ class PubNubHandler : NSObject, PNObjectEventListener {
     var channel: String
     var message: String
     let configuration = PNConfiguration(publishKey: PubNubKeys.publish, subscribeKey: PubNubKeys.subscribe)
-    var client: PubNub!
+    var client: PubNub
+    var receiveHandler:((PNMessageResult) -> Void)?
     
     override init() {
         self.message = "unchanged"
@@ -70,6 +71,7 @@ class PubNubHandler : NSObject, PNObjectEventListener {
     func client(_ client: PubNub, didReceiveMessage message: PNMessageResult) {
         print("didReceiveMessage")
         dump(message)
+        receiveHandler?(message)
     }
     
     func client(_ client: PubNub, didReceivePresenceEvent event: PNPresenceEventResult) {
