@@ -83,6 +83,8 @@
 		1748C4A71DE215E3005A0A74 /* PubNubHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PubNubHandler.swift; sourceTree = "<group>"; };
 		1DBFAE6E545E50EDE791B354 /* Pods_MessageIntention.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MessageIntention.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29BE92469E67697D41CBEB0F /* Pods-MessageIntentionUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessageIntentionUI.release.xcconfig"; path = "Pods/Target Support Files/Pods-MessageIntentionUI/Pods-MessageIntentionUI.release.xcconfig"; sourceTree = "<group>"; };
+		528246371DF52C5200BDCB86 /* MessageIntention.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MessageIntention.entitlements; sourceTree = "<group>"; };
+		528246381DF52C5800BDCB86 /* MessageIntentionUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MessageIntentionUI.entitlements; sourceTree = "<group>"; };
 		52BB49651DE0E42C00BD0CC7 /* SendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendViewController.swift; sourceTree = "<group>"; };
 		52EC39EB1DE01A1D007BFFE4 /* Connnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Connnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52EC39EE1DE01A1D007BFFE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 		1748C4831DE105D8005A0A74 /* MessageIntention */ = {
 			isa = PBXGroup;
 			children = (
+				528246371DF52C5200BDCB86 /* MessageIntention.entitlements */,
 				1748C4841DE105D8005A0A74 /* IntentHandler.swift */,
 				1748C4861DE105D8005A0A74 /* Info.plist */,
 			);
@@ -150,6 +153,7 @@
 		1748C48E1DE105D8005A0A74 /* MessageIntentionUI */ = {
 			isa = PBXGroup;
 			children = (
+				528246381DF52C5800BDCB86 /* MessageIntentionUI.entitlements */,
 				1748C48F1DE105D8005A0A74 /* IntentViewController.swift */,
 				1748C4911DE105D8005A0A74 /* MainInterface.storyboard */,
 				1748C4941DE105D8005A0A74 /* Info.plist */,
@@ -346,17 +350,30 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = VY4FR2X9W5;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					1748C48A1DE105D8005A0A74 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = VY4FR2X9W5;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					52EC39EA1DE01A1D007BFFE4 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = VY4FR2X9W5;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
 							com.apple.Siri = {
 								enabled = 1;
 							};
@@ -720,12 +737,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F14A0549CED8703FED4F9284 /* Pods-MessageIntention.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MessageIntention/MessageIntention.entitlements;
+				DEVELOPMENT_TEAM = VY4FR2X9W5;
 				INFOPLIST_FILE = MessageIntention/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ios-connect.Connect.MessageIntention";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e8bdfd55-42c7-4087-b2b9-0bcbcd700bba";
-				PROVISIONING_PROFILE_SPECIFIER = "match Development com.ios-connect.Connect.MessageIntention";
+				PROVISIONING_PROFILE = "bd321f6d-1a10-43ae-bf3c-869da21bdfac";
+				PROVISIONING_PROFILE_SPECIFIER = Connect.MessageIntention;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -735,12 +754,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B5E527358A75E9EE07E9825D /* Pods-MessageIntention.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MessageIntention/MessageIntention.entitlements;
+				DEVELOPMENT_TEAM = VY4FR2X9W5;
 				INFOPLIST_FILE = MessageIntention/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ios-connect.Connect.MessageIntention";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e8bdfd55-42c7-4087-b2b9-0bcbcd700bba";
-				PROVISIONING_PROFILE_SPECIFIER = "match Development com.ios-connect.Connect.MessageIntention";
+				PROVISIONING_PROFILE = "bd321f6d-1a10-43ae-bf3c-869da21bdfac";
+				PROVISIONING_PROFILE_SPECIFIER = Connect.MessageIntention;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -750,12 +771,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B52E2DA30A4B4821BF5E0CFE /* Pods-MessageIntentionUI.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MessageIntentionUI/MessageIntentionUI.entitlements;
+				DEVELOPMENT_TEAM = VY4FR2X9W5;
 				INFOPLIST_FILE = MessageIntentionUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ios-connect.Connect.MessageIntentionUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "14e35509-884c-4f09-a1c6-d5266ac7251e";
-				PROVISIONING_PROFILE_SPECIFIER = "match Development com.ios-connect.Connect.MessageIntentionUI";
+				PROVISIONING_PROFILE = "c7c1df1f-0bdd-4fb1-825b-ed9028fd57d3";
+				PROVISIONING_PROFILE_SPECIFIER = Connect.MessageIntentionUI;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -765,12 +788,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 29BE92469E67697D41CBEB0F /* Pods-MessageIntentionUI.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MessageIntentionUI/MessageIntentionUI.entitlements;
+				DEVELOPMENT_TEAM = VY4FR2X9W5;
 				INFOPLIST_FILE = MessageIntentionUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ios-connect.Connect.MessageIntentionUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "14e35509-884c-4f09-a1c6-d5266ac7251e";
-				PROVISIONING_PROFILE_SPECIFIER = "match Development com.ios-connect.Connect.MessageIntentionUI";
+				PROVISIONING_PROFILE = "c7c1df1f-0bdd-4fb1-825b-ed9028fd57d3";
+				PROVISIONING_PROFILE_SPECIFIER = Connect.MessageIntentionUI;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -877,13 +902,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Connnect/Connnect.entitlements;
+				DEVELOPMENT_TEAM = VY4FR2X9W5;
 				INFOPLIST_FILE = Connnect/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ios-connect.Connect";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ae589b7a-b2fd-42d2-8381-2a8ecc08718e";
-				PROVISIONING_PROFILE_SPECIFIER = "match Development com.ios-connect.Connect";
+				PROVISIONING_PROFILE = "03142a47-1f43-4759-8bcc-a63b4c64cbdc";
+				PROVISIONING_PROFILE_SPECIFIER = "Connect Main App";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -894,13 +920,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Connnect/Connnect.entitlements;
+				DEVELOPMENT_TEAM = VY4FR2X9W5;
 				INFOPLIST_FILE = Connnect/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ios-connect.Connect";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ae589b7a-b2fd-42d2-8381-2a8ecc08718e";
-				PROVISIONING_PROFILE_SPECIFIER = "match Development com.ios-connect.Connect";
+				PROVISIONING_PROFILE = "03142a47-1f43-4759-8bcc-a63b4c64cbdc";
+				PROVISIONING_PROFILE_SPECIFIER = "Connect Main App";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
