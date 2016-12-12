@@ -1,17 +1,34 @@
 import UIKit
 
-class SendViewController: UIViewController {
+class SendViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    let pub = AppDelegate.shared.client
     var textDelegate = MessageTextDelegate()
     
-    
  
+    @IBOutlet weak var picker: UIPickerView!
+    
     @IBOutlet weak var messageTextField: UITextField! {
         didSet {
             self.messageTextField.delegate = self.textDelegate
         }
     }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        let allChannels = pub?.channels()
+        return allChannels?[row]
+    }
 
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    
+        return pub?.channels().count ?? 0
+        
+    
+    }
     override func viewDidLoad() {
         navigationItem.title = "Send Message"
 
@@ -20,14 +37,20 @@ class SendViewController: UIViewController {
         textDelegate.callback = self.helper
         
         
+        
 
     }
     
     func helper (message: String){
-            let pub = AppDelegate.shared.client
+        
     
-            let targetChannel = pub?.channels().last!
-            pub?.publish(message, toChannel:targetChannel!,
+        let selectedIndex = picker.selectedRow(inComponent: 0)
+        
+        let allChannels = pub!.channels()
+        
+        let targetChannel = allChannels[selectedIndex]
+        
+        pub?.publish(message, toChannel:targetChannel,
                              compressed: false, withCompletion: nil)
     }
 
