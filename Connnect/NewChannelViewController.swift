@@ -15,6 +15,10 @@ class NewChannelViewController: UIViewController {
     
     @IBAction func newChannel(sender: UIButton) {
         guard let newChannelName = newTextField.text else { return }
+        
+        guard newChannelName != ""
+            else { return }
+
         AppDelegate.shared.client.subscribe(
             toChannels: [newChannelName], withPresence: true)
         var current = (UserDefaults.standard.array(forKey: channelKey) ?? [Any]()) as? [String]
