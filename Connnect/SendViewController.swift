@@ -2,19 +2,10 @@ import UIKit
 
 class SendViewController: UIViewController {
 
-    lazy var textDelegate:MessageTextDelegate = {
-        let del = MessageTextDelegate(msgHandler: { (message) in
-            
-            let pub = AppDelegate.shared.client
-            
-            let targetChannel = pub?.channels().last!
-
-            pub?.publish(message, toChannel:targetChannel!,
-                         compressed: false, withCompletion: nil)
-        })
-        return del
-    }()
-
+    var textDelegate = MessageTextDelegate()
+    
+    
+ 
     @IBOutlet weak var messageTextField: UITextField! {
         didSet {
             self.messageTextField.delegate = self.textDelegate
@@ -25,8 +16,19 @@ class SendViewController: UIViewController {
         navigationItem.title = "Send Message"
 
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "NewBack")!)
+        
+        textDelegate.callback = self.helper
+        
+        
 
-
+    }
+    
+    func helper (message: String){
+            let pub = AppDelegate.shared.client
+    
+            let targetChannel = pub?.channels().last!
+            pub?.publish(message, toChannel:targetChannel!,
+                             compressed: false, withCompletion: nil)
     }
 
 }
@@ -34,16 +36,11 @@ class SendViewController: UIViewController {
 
 class MessageTextDelegate: NSObject, UITextFieldDelegate {
 
-    let callback: ((_ text:String) -> Void)
-
-    init(msgHandler: @escaping (String) -> Void) {
-        callback = msgHandler
-    }
-
+    var callback: ((_ text:String) -> Void)? = nil
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         guard let message = textField.text else { return false }
-        callback(message)
+        callback?(message)
         print("Send Message: \(message)")
         textField.resignFirstResponder()
 
